@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dd6o2ooh6vpnn"]
+
+[ext_resource type="Script" uid="uid://lwoap3affj6h" path="res://scripts/ball.gd" id="1_cxlvu"]
+[ext_resource type="Texture2D" uid="uid://7di576fmsofa" path="res://assests/star_ball.png" id="2_f7cbr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y7wee"]
+
+[node name="Ball" type="CharacterBody2D" unique_id=1347734428]
+script = ExtResource("1_cxlvu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=381869287]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_f7cbr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=667665980]
+position = Vector2(0, 1)
+scale = Vector2(1.2964485, 1.2964485)
+shape = SubResource("CircleShape2D_y7wee")
