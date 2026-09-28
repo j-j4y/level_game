@@ -21,10 +21,10 @@ script = ExtResource("1_w8frs")
 position = Vector2(600, 400)
 
 [node name="Paddle" parent="." unique_id=996385958 instance=ExtResource("1_2q6dc")]
-position = Vector2(587, 673)
+position = Vector2(612, 693)
 
 [node name="Ball" parent="." unique_id=1347734428 instance=ExtResource("2_w7c3h")]
-position = Vector2(677, 494)
+position = Vector2(811, 494)
 
 [node name="walls" type="StaticBody2D" parent="." unique_id=934260252]
 
