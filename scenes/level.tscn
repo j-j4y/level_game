@@ -11,6 +11,9 @@ size = Vector2(11, 800.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2cho"]
 size = Vector2(1225, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omhhf"]
+size = Vector2(1188.5, 20)
+
 [node name="Level" type="Node2D" unique_id=898102757]
 script = ExtResource("1_w8frs")
 
@@ -42,3 +45,11 @@ modulate = Color(1, 1, 1, 0.40392157)
 z_index = -3
 position = Vector2(638, 339)
 texture = ExtResource("4_mx8sn")
+
+[node name="Deadzone" type="Area2D" parent="." unique_id=2078337752]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deadzone" unique_id=1760487930]
+position = Vector2(604, 814)
+shape = SubResource("RectangleShape2D_omhhf")
+
+[connection signal="body_entered" from="Deadzone" to="Ball" method="_on_deadzone_body_entered"]

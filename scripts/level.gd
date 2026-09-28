@@ -40,10 +40,5 @@ func get_colors():
 		Color(0.54,0.17,0.89,1),
 		Color(0.68,1,0.18,1),
 		Color(1,0.4,0.6,1),
-		
-		
-		
-		
-		
 	]
 	return colors
