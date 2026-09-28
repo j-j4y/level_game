@@ -2,6 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://dqgaduyp05ixy" path="res://scenes/paddle.tscn" id="1_2q6dc"]
 [ext_resource type="PackedScene" uid="uid://dd6o2ooh6vpnn" path="res://scenes/ball.tscn" id="2_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://wsyaygx347bt" path="res://scenes/block.tscn" id="3_w8frs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nwoa8"]
+size = Vector2(12, 645)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2cho"]
+size = Vector2(1178, 20)
 
 [node name="Level" type="Node2D" unique_id=898102757]
 
@@ -13,3 +20,20 @@ position = Vector2(586, 580)
 
 [node name="Ball" parent="." unique_id=1347734428 instance=ExtResource("2_w7c3h")]
 position = Vector2(735, 335)
+
+[node name="walls" type="StaticBody2D" parent="." unique_id=934260252]
+
+[node name="left wall" type="CollisionShape2D" parent="walls" unique_id=681819406]
+position = Vector2(-3, 329)
+shape = SubResource("RectangleShape2D_nwoa8")
+
+[node name="right wall" type="CollisionShape2D" parent="walls" unique_id=588950917]
+position = Vector2(1162, 326)
+shape = SubResource("RectangleShape2D_nwoa8")
+
+[node name="ceiling" type="CollisionShape2D" parent="walls" unique_id=920991158]
+position = Vector2(580, -8)
+shape = SubResource("RectangleShape2D_m2cho")
+
+[node name="block" parent="walls" unique_id=1599731063 instance=ExtResource("3_w8frs")]
+position = Vector2(411, 416)

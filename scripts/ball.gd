@@ -12,13 +12,17 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if is_active:
 		var collison = move_and_collide(velocity*delta)
-		
+
 		if collison:
 			velocity = velocity.bounce(collison.get_normal())
 			
+			if collison.get_collider().has_method("hit"):
+				collison.get_collider().hit()
+
 		if(velocity.y >0 and velocity.y <100):
 			velocity.y = -200
 			
 		if velocity.x == 0:
 			velocity.x = -200
 		
+	
