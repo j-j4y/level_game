@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dqgaduyp05ixy" path="res://scenes/paddle.tscn" id="1_2q6dc"]
 [ext_resource type="Script" uid="uid://bjo1l8s7lms4o" path="res://scripts/level.gd" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://dd6o2ooh6vpnn" path="res://scenes/ball.tscn" id="2_w7c3h"]
+[ext_resource type="Texture2D" uid="uid://ecl7vdsqxmj" path="res://assests/background1.jpg" id="4_mx8sn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nwoa8"]
 size = Vector2(11, 800.5)
@@ -35,3 +36,9 @@ shape = SubResource("RectangleShape2D_nwoa8")
 [node name="ceiling" type="CollisionShape2D" parent="walls" unique_id=920991158]
 position = Vector2(603.5, -8)
 shape = SubResource("RectangleShape2D_m2cho")
+
+[node name="Background1" type="Sprite2D" parent="." unique_id=733854754]
+modulate = Color(1, 1, 1, 0.40392157)
+z_index = -3
+position = Vector2(638, 339)
+texture = ExtResource("4_mx8sn")
