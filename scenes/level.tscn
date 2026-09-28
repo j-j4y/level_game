@@ -1,39 +1,37 @@
 [gd_scene format=3 uid="uid://byr3yb2geyijr"]
 
 [ext_resource type="PackedScene" uid="uid://dqgaduyp05ixy" path="res://scenes/paddle.tscn" id="1_2q6dc"]
+[ext_resource type="Script" uid="uid://bjo1l8s7lms4o" path="res://scripts/level.gd" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://dd6o2ooh6vpnn" path="res://scenes/ball.tscn" id="2_w7c3h"]
-[ext_resource type="PackedScene" uid="uid://wsyaygx347bt" path="res://scenes/block.tscn" id="3_w8frs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nwoa8"]
-size = Vector2(12, 645)
+size = Vector2(11, 800.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2cho"]
-size = Vector2(1178, 20)
+size = Vector2(1225, 20)
 
 [node name="Level" type="Node2D" unique_id=898102757]
+script = ExtResource("1_w8frs")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=752088218]
-position = Vector2(578, 325)
+position = Vector2(600, 400)
 
 [node name="Paddle" parent="." unique_id=996385958 instance=ExtResource("1_2q6dc")]
-position = Vector2(586, 580)
+position = Vector2(587, 673)
 
 [node name="Ball" parent="." unique_id=1347734428 instance=ExtResource("2_w7c3h")]
-position = Vector2(735, 335)
+position = Vector2(736, 428)
 
 [node name="walls" type="StaticBody2D" parent="." unique_id=934260252]
 
 [node name="left wall" type="CollisionShape2D" parent="walls" unique_id=681819406]
-position = Vector2(-3, 329)
+position = Vector2(0.5, 394.25)
 shape = SubResource("RectangleShape2D_nwoa8")
 
 [node name="right wall" type="CollisionShape2D" parent="walls" unique_id=588950917]
-position = Vector2(1162, 326)
+position = Vector2(1208, 399)
 shape = SubResource("RectangleShape2D_nwoa8")
 
 [node name="ceiling" type="CollisionShape2D" parent="walls" unique_id=920991158]
-position = Vector2(580, -8)
+position = Vector2(603.5, -8)
 shape = SubResource("RectangleShape2D_m2cho")
-
-[node name="block" parent="walls" unique_id=1599731063 instance=ExtResource("3_w8frs")]
-position = Vector2(411, 416)
