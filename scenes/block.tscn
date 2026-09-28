@@ -5,7 +5,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nwoa8"]
 
-[node name="block" type="RigidBody2D" unique_id=1599731063]
+[sub_resource type="Gradient" id="Gradient_nwoa8"]
+colors = PackedColorArray(0.21447295, 0.71154416, 0.6690674, 1, 1, 1, 1, 1)
+
+[node name="Block" type="RigidBody2D" unique_id=1599731063 groups=["Block"]]
 gravity_scale = 0.0
 script = ExtResource("1_cgrg5")
 
@@ -16,3 +19,20 @@ texture = ExtResource("1_8r6n6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=107851845]
 scale = Vector2(1.6, 1.6)
 shape = SubResource("RectangleShape2D_nwoa8")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1900490990]
+emitting = false
+amount = 50
+lifetime = 0.5
+one_shot = true
+preprocess = 0.5
+randomness = 1.0
+draw_order = 1
+emission_shape = 1
+emission_sphere_radius = 24.0
+gravity = Vector2(0, -500)
+linear_accel_min = 0.1
+linear_accel_max = 0.1
+scale_amount_min = 0.0
+scale_amount_max = 2.0
+color_ramp = SubResource("Gradient_nwoa8")

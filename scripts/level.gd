@@ -4,8 +4,8 @@ extends Node2D
 
 
 
-var columns = 32
-var rows = 7
+var columns = 2
+var rows = 2
 var margin = 50
 
 
@@ -14,6 +14,10 @@ func  _ready() -> void:
 	setupLevel()
 	
 func setupLevel():
+	
+	rows = 2 + GameManager.level
+	if rows > 9:
+		rows = 9
 	
 	var colors = get_colors()
 	colors.shuffle()

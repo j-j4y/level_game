@@ -5,10 +5,19 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y7wee"]
 
+[sub_resource type="Curve" id="Curve_nwoa8"]
+_data = [Vector2(0.09523809, 1), 0.0, 0.0, 0, 0, Vector2(0.7777778, 0.0029239655), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_m2cho"]
+offsets = PackedFloat32Array(0.0061728396, 0.537037)
+colors = PackedColorArray(0.5128615, 1, 0.92343444, 1, 1, 1, 1, 1)
+
 [node name="Ball" type="CharacterBody2D" unique_id=1347734428]
 script = ExtResource("1_cxlvu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=381869287]
+z_index = 1
 scale = Vector2(0.15, 0.15065593)
 texture = ExtResource("2_f7cbr")
 
@@ -16,3 +25,16 @@ texture = ExtResource("2_f7cbr")
 position = Vector2(0, 1)
 scale = Vector2(1.9764457, 1.9764457)
 shape = SubResource("CircleShape2D_y7wee")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=2090862533]
+modulate = Color(1, 1, 1, 0.5137255)
+amount = 900
+texture = ExtResource("2_f7cbr")
+lifetime = 0.4
+emission_shape = 1
+emission_sphere_radius = 8.0
+gravity = Vector2(0, 0)
+scale_amount_min = 0.01
+scale_amount_max = 0.01
+scale_amount_curve = SubResource("Curve_nwoa8")
+color_ramp = SubResource("Gradient_m2cho")

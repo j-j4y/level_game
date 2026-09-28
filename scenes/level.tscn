@@ -24,7 +24,7 @@ position = Vector2(600, 400)
 position = Vector2(587, 673)
 
 [node name="Ball" parent="." unique_id=1347734428 instance=ExtResource("2_w7c3h")]
-position = Vector2(736, 428)
+position = Vector2(677, 494)
 
 [node name="walls" type="StaticBody2D" parent="." unique_id=934260252]
 
@@ -47,6 +47,7 @@ position = Vector2(638, 339)
 texture = ExtResource("4_mx8sn")
 
 [node name="Deadzone" type="Area2D" parent="." unique_id=2078337752]
+position = Vector2(0, -2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Deadzone" unique_id=1760487930]
 position = Vector2(604, 814)
