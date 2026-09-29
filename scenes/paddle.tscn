@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqgaduyp05ixy"]
 
 [ext_resource type="Script" uid="uid://f7pqauswk06j" path="res://scripts/paddle.gd" id="1_y7wee"]
-[ext_resource type="Texture2D" uid="uid://r0hfb7aaywmp" path="res://assests/paddle.png" id="2_mo4dg"]
+[ext_resource type="Texture2D" uid="uid://bsd6c48qswuxj" path="res://assests/block.png" id="2_y7wee"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f7cbr"]
 radius = 14.999994
@@ -12,8 +12,8 @@ motion_mode = 1
 script = ExtResource("1_y7wee")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2049247233]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_mo4dg")
+scale = Vector2(3, 0.3)
+texture = ExtResource("2_y7wee")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2055743234]
 rotation = 1.5700166

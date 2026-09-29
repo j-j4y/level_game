@@ -4,8 +4,8 @@ extends Node2D
 
 
 
-var columns = 2
-var rows = 2
+var columns = 16
+var rows = 7
 var margin = 50
 
 
@@ -29,7 +29,7 @@ func setupLevel():
 				
 				var new_block = blockobject.instantiate()
 				add_child(new_block)
-				new_block.position = Vector2(margin + (40*c), margin + (40*r))
+				new_block.position = Vector2(margin + (80*c), margin + (40*r))
 				
 				var sprite = new_block.get_node('Sprite2D')
 				if r <= 9:
