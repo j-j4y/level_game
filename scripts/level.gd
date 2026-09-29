@@ -4,8 +4,8 @@ extends Node2D
 
 
 
-var columns = 16
-var rows = 7
+var columns = 2
+var rows = 2
 var margin = 50
 
 

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="levels-game"
-run/main_scene="res://scenes/level.tscn"
+run/main_scene="uid://dx63jff4mef71"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -56,4 +56,3 @@ ui_right={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-environment/defaults/default_clear_color=Color(0.054142185, 0.05414217, 0.05414217, 1)

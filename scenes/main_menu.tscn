@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dx63jff4mef71"]
+
+[ext_resource type="Script" uid="uid://cyqml18fbqvdi" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://ecl7vdsqxmj" path="res://assests/background1.jpg" id="2_ekxnf"]
+
+[node name="MainMenu" type="Node2D" unique_id=1475515392]
+script = ExtResource("1_l6cm7")
+
+[node name="ButtonManager" type="Control" parent="." unique_id=1928926646]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background1" type="Sprite2D" parent="ButtonManager" unique_id=1845482938]
+position = Vector2(598.7172, 396.125)
+scale = Vector2(0.5924607, 0.5924606)
+texture = ExtResource("2_ekxnf")
+
+[node name="Start" type="Button" parent="ButtonManager" unique_id=958634710]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 347.0
+offset_right = 718.0
+offset_bottom = 423.0
+theme_override_colors/font_hover_color = Color(0.58654004, 0.4579547, 0.921369, 1)
+theme_override_font_sizes/font_size = 30
+text = "Start"
+
+[node name="Quit" type="Button" parent="ButtonManager" unique_id=182763464]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 451.0
+offset_right = 717.0
+offset_bottom = 526.0
+theme_override_colors/font_hover_color = Color(0.5882353, 0.45882353, 0.92156863, 1)
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
+[connection signal="pressed" from="ButtonManager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ButtonManager/Quit" to="." method="_on_quit_pressed"]
