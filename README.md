@@ -5,6 +5,6 @@
 
 ## assets used
 
-- star drawn by me
-- blocks drawn by me
+- star drawn by me: 15 mins
+- blocks drawn by me: 15 mins
 - background: [space background](https://unblast.com/10-free-space-background-images-jpg/)
