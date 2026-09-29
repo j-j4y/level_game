@@ -2,6 +2,7 @@
 
 ## tutorials used
 - [base game](https://www.youtube.com/watch?v=IYjRhcOCFDo): 3 hours
+- [main menu](https://www.youtube.com/watch?v=29jCe-mjyKQ): 20 mins
 
 ## assets used
 
